@@ -40,19 +40,16 @@ incorporate other evaluation metrics and document it in our final project report
 The baseline techniques used for a random forest classification in our project’s case involves the
 following steps.
 #   Step   Description
-1   Data Preparation Luckily for us the data has been well cleaned so this step is largely done for us.
+1  | Data| Preparation   |  Luckily for us the data has been well cleaned so this step is largely done for us.
 However, we can split and manipulate the data in various ways if necessary as
 long as we ensure the class imbalance is maintained in both sets
-2 Model Training Initially, we will train with default parameters and fine tune the parameters to
+2  |  Model   |  Training Initially, we will train with default parameters and fine tune the parameters to
 achieve a higher degree of accuracy when the model makes predictions.
-3 Evaluation We will calculate the F1 score and AUPRC to assess the performance of the
+3  |  Evaluation   |  We will calculate the F1 score and AUPRC to assess the performance of the
 model.
-4 Comparison Once the results are obtained we will compare the metrics with the desired
+4  |  Comparison   |  Once the results are obtained we will compare the metrics with the desired
 benchmarks and previous results.
-5 Model
-
-## Improvement
-Based on the results we have obtained, we will fine tune the model and
+5  |  Model Improvement   |  Based on the results we have obtained, we will fine tune the model and
 re-evaluate.
 
 ## References
