@@ -39,22 +39,18 @@ incorporate other evaluation metrics and document it in our final project report
 ## Baseline Techniques
 The baseline techniques used for a random forest classification in our project’s case involves the
 following steps.
-#   Step   Description
-1  | Data| Preparation   |  Luckily for us the data has been well cleaned so this step is largely done for us.
-However, we can split and manipulate the data in various ways if necessary as
-long as we ensure the class imbalance is maintained in both sets
-2  |  Model   |  Training Initially, we will train with default parameters and fine tune the parameters to
-achieve a higher degree of accuracy when the model makes predictions.
-3  |  Evaluation   |  We will calculate the F1 score and AUPRC to assess the performance of the
-model.
-4  |  Comparison   |  Once the results are obtained we will compare the metrics with the desired
-benchmarks and previous results.
-5  |  Model Improvement   |  Based on the results we have obtained, we will fine tune the model and
-re-evaluate.
+| #  |  Step  |  Description  |
+| :---------------- | :------: | ----: |
+| 1  | Data Preparation   |  Luckily for us the data has been well cleaned so this step is largely done for us. However, we can split and manipulate the data in various ways if necessary as long as we ensure the class imbalance is maintained in both sets. |
+| 2  |  Model   |  Training Initially, we will train with default parameters and fine tune the parameters to achieve a higher degree of accuracy when the model makes predictions. |
+| 3  |  Evaluation   |  We will calculate the F1 score and AUPRC to assess the performance of the model. |
+| 4  |  Comparison   |  Once the results are obtained we will compare the metrics with the desired benchmarks and previous results. |
+| 5  |  Model Improvement   |  Based on the results we have obtained, we will fine tune the model and re-evaluate. |
 
 ## References
 [1] Kiran Deep Singh, P. Singh, and Sandeep Singh Kang, “Ensembled-based credit card fraud detection in
 online transactions,” Jan. 2022, doi: https://doi.org/10.1063/5.0108873.
+
 [2] C. Whitrow, D. J. Hand, P. Juszczak, D. Weston, and N. M. Adams, “Transaction aggregation as a
 strategy for credit card fraud detection,” Data Mining and Knowledge Discovery, vol. 18, no. 1, pp. 30–55,
 Jul. 2008, doi: https://doi.org/10.1007/s10618-008-0116-z.
