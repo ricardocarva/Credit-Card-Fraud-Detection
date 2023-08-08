@@ -1,5 +1,14 @@
 # CAP4770-Credit-Card-Fraud-Detection
 
+## Dependencies
+
+Make sure you install all these dependencies:
+
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade Pillow
+pip3 install plotly_express==0.4.0
+pip3 install imbalanced-learn
+
 ## Synopsis
 This project focuses on creating a robust fraud detection scheme for credit card transactions, utilizing the
 data science techniques learned during the Introduction to Data Science course at the University of
@@ -46,6 +55,52 @@ following steps.
 | 3  |  Evaluation   |  We will calculate the F1 score and AUPRC to assess the performance of the model. |
 | 4  |  Comparison   |  Once the results are obtained we will compare the metrics with the desired benchmarks and previous results. |
 | 5  |  Model Improvement   |  Based on the results we have obtained, we will fine tune the model and re-evaluate. |
+
+## Environment Setup
+Python Environment: Ensure you have Python installed (preferably version 3.9) on your system.
+Package Installation: Install the required packages by running the following command in your terminal or command prompt:
+
+pip install numpy pandas matplotlib seaborn plotly scikit-learn imbalanced-learn Pillow plotly_express
+
+Code Execution Steps
+1. Importing Libraries:
+- The code begins by importing necessary libraries for data analysis and visualization.
+
+3. Loading Dataset:
+- The dataset is loaded from the specified CSV file path using the pd.read_csv() function.
+
+4. Data Exploration and Visualization:
+- The shape of the dataset is printed using data.shape.
+- A pie chart is created using Plotly Express (px.pie()) to visualize the distribution of fraud vs. valid transactions.
+- Fraudulent and valid transactions are separated and their counts are displayed.
+- Descriptive statistics for the 'Amount' column are computed and printed for both fraudulent and valid transactions.
+- A correlation matrix heatmap is created using Seaborn to visualize the correlation between features.
+
+5. Data Preprocessing:
+- The target variable 'Class' is separated from the features to create X (features) and Y (target) arrays.
+- The dataset is split into training and testing sets using train_test_split() from scikit-learn.
+
+6. Handling Class Imbalance:
+- Different resampling methods are defined in the sample_methods dictionary, including SMOTE, NearMiss, RandomOverSampler, and RandomUnderSampler.
+- The split_features() function separates features and target, and the rebalance_class() function applies different resampling methods and displays the shape - and balance of the resulting datasets.
+- The training set is rebalanced using the defined resampling methods.
+
+7. Random Forest Classifier:
+- The RandomForestClassifier from scikit-learn is imported.
+- An instance of the classifier is created with a specified number of estimators.
+- The model is trained using the rebalanced training data.
+
+8. Prediction and Evaluation:
+- The model's predictions are obtained using predict() on the test data.
+- Various evaluation metrics (accuracy, precision, recall, F1 score, AUPRC) are computed using scikit-learn's metrics functions.
+- The evaluation results are displayed and visualized using a bar chart.
+
+9. Precision-Recall Curve:
+- The precision-recall curve and display are created using scikit-learn's precision_recall_curve() and PrecisionRecallDisplay() functions.
+
+###Note
+Make sure to replace the CSV file path with the correct path to your "creditcard.csv" dataset file.
+The code involves data visualization and analysis, handling class imbalance, and training and evaluating a Random Forest Classifier for fraud detection.
 
 ## References
 [1] Kiran Deep Singh, P. Singh, and Sandeep Singh Kang, “Ensembled-based credit card fraud detection in
