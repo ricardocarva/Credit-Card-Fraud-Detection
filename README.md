@@ -48,12 +48,34 @@ following steps.
 | 5  |  Model Improvement   |  Based on the results we have obtained, we will fine tune the model and re-evaluate. |
 
 ## Environment Setup
-Python Environment: Ensure you have Python installed (preferably version 3.9) on your system.
-Package Installation: Install the required packages by running the following command in your terminal or command prompt:
+### Python Environment: 
+Ensure you have Python installed (preferably version 3.9) on your system.
+### Jupyter Notebook: 
+This project is intended to be run using Jupyter Notebook. If you don't have Jupyter Notebook installed, you can install it using the following command: `pip install jupyter`
+### Package Installation: 
+Install the required packages by running the following command in your terminal or command prompt: `pip install numpy pandas matplotlib seaborn plotly scikit-learn imbalanced-learn Pillow plotly_express`
 
-`pip install numpy pandas matplotlib seaborn plotly scikit-learn imbalanced-learn Pillow plotly_express`
+### Running Jupyter Notebook in PyCharm
+1. Install PyCharm:
+If you haven't already, download and install PyCharm from the official website: [PyCharm Download]([url](https://www.jetbrains.com/pycharm/download/?section=windows)).
 
-Code Execution Steps
+3. Open Project: Open your project in PyCharm.
+
+4. Create or Open Jupyter Notebook:
+   - If you have an existing Jupyter Notebook file (with .ipynb extension), you can directly open it in PyCharm.
+   - If you don't have an existing Jupyter Notebook, you can create a new one by right-clicking on the project folder in the Project Explorer, selecting "New" > "Python File," and giving it a .ipynb extension.
+
+5. Activate Virtual Environment (Optional):
+   - If you're using a virtual environment, make sure to activate it using the PyCharm terminal. This ensures that the Jupyter Notebook runs in the correct environment.
+   - To activate the virtual environment:
+`source path_to_your_virtual_environment/bin/activate`
+
+6. Run Jupyter Notebook:
+   - Open the Jupyter Notebook file in the PyCharm editor.
+   - You can run each cell by clicking on it and then clicking the "Run" button in the cell toolbar or using the keyboard shortcut Shift + Enter.
+   - Alternatively, you can run all cells by selecting "Run" > "Run All Cells" from the Jupyter Notebook menu.
+
+### Code Execution Steps
 1. Importing Libraries:
    - The code begins by importing necessary libraries for data analysis and visualization.
 
