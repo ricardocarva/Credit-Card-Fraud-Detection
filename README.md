@@ -47,6 +47,74 @@ following steps.
 | 4  |  Comparison   |  Once the results are obtained we will compare the metrics with the desired benchmarks and previous results. |
 | 5  |  Model Improvement   |  Based on the results we have obtained, we will fine tune the model and re-evaluate. |
 
+## Environment Setup
+### Python Environment
+Ensure you have Python installed (preferably version 3.9) on your system.
+### Jupyter Notebook
+This project is intended to be run using Jupyter Notebook. If you don't have Jupyter Notebook installed, you can install it using the following command: `pip install jupyter`
+### Package Installation
+Install the required packages by running the following command in your terminal or command prompt: `pip install numpy pandas matplotlib seaborn plotly scikit-learn imbalanced-learn Pillow plotly_express`
+
+### Running Jupyter Notebook in PyCharm
+1. Install PyCharm:
+If you haven't already, download and install PyCharm from the official website: [PyCharm Download]([url](https://www.jetbrains.com/pycharm/download/?section=windows)).
+
+3. Open Project: Open your project in PyCharm.
+
+4. Create or Open Jupyter Notebook:
+   - If you have an existing Jupyter Notebook file (with .ipynb extension), you can directly open it in PyCharm.
+   - If you don't have an existing Jupyter Notebook, you can create a new one by right-clicking on the project folder in the Project Explorer, selecting "New" > "Python File," and giving it a .ipynb extension.
+
+5. Activate Virtual Environment (Optional):
+   - If you're using a virtual environment, make sure to activate it using the PyCharm terminal. This ensures that the Jupyter Notebook runs in the correct environment.
+   - To activate the virtual environment:
+`source path_to_your_virtual_environment/bin/activate`
+
+6. Run Jupyter Notebook:
+   - Open the Jupyter Notebook file in the PyCharm editor.
+   - You can run each cell by clicking on it and then clicking the "Run" button in the cell toolbar or using the keyboard shortcut Shift + Enter.
+   - Alternatively, you can run all cells by selecting "Run" > "Run All Cells" from the Jupyter Notebook menu.
+
+### Code Execution Steps
+1. Importing Libraries:
+   - The code begins by importing necessary libraries for data analysis and visualization.
+
+2. Loading Dataset:
+   - The dataset is loaded from the specified CSV file path using the pd.read_csv() function.
+
+3. Data Exploration and Visualization:
+   - The shape of the dataset is printed using data.shape.
+   - A pie chart is created using Plotly Express (px.pie()) to visualize the distribution of fraud vs. valid transactions.
+   - Fraudulent and valid transactions are separated and their counts are displayed.
+   - Descriptive statistics for the 'Amount' column are computed and printed for both fraudulent and valid transactions.
+   - A correlation matrix heatmap is created using Seaborn to visualize the correlation between features.
+
+4. Data Preprocessing:
+   - The target variable 'Class' is separated from the features to create X (features) and Y (target) arrays.
+   - The dataset is split into training and testing sets using train_test_split() from scikit-learn.
+
+5. Handling Class Imbalance:
+   - Different resampling methods are defined in the sample_methods dictionary, including SMOTE, NearMiss, RandomOverSampler, and RandomUnderSampler.
+   - The split_features() function separates features and target, and the rebalance_class() function applies different resampling methods and displays the shape - and balance of the resulting datasets.
+   - The training set is rebalanced using the defined resampling methods.
+
+6. Random Forest Classifier:
+   - The RandomForestClassifier from scikit-learn is imported.
+   - An instance of the classifier is created with a specified number of estimators.
+   - The model is trained using the rebalanced training data.
+
+7. Prediction and Evaluation:
+   - The model's predictions are obtained using predict() on the test data.
+   - Various evaluation metrics (accuracy, precision, recall, F1 score, AUPRC) are computed using scikit-learn's metrics functions.
+   - The evaluation results are displayed and visualized using a bar chart.
+
+8. Precision-Recall Curve:
+   - The precision-recall curve and display are created using scikit-learn's precision_recall_curve() and PrecisionRecallDisplay() functions.
+
+### Note
+Make sure to replace the CSV file path with the correct path to your "creditcard.csv" dataset file.
+The code involves data visualization and analysis, handling class imbalance, and training and evaluating a Random Forest Classifier for fraud detection.
+
 ## References
 [1] Kiran Deep Singh, P. Singh, and Sandeep Singh Kang, “Ensembled-based credit card fraud detection in
 online transactions,” Jan. 2022, doi: https://doi.org/10.1063/5.0108873.
