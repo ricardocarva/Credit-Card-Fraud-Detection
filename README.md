@@ -48,11 +48,11 @@ following steps.
 | 5  |  Model Improvement   |  Based on the results we have obtained, we will fine tune the model and re-evaluate. |
 
 ## Environment Setup
-### Python Environment: 
+### Python Environment
 Ensure you have Python installed (preferably version 3.9) on your system.
-### Jupyter Notebook: 
+### Jupyter Notebook
 This project is intended to be run using Jupyter Notebook. If you don't have Jupyter Notebook installed, you can install it using the following command: `pip install jupyter`
-### Package Installation: 
+### Package Installation
 Install the required packages by running the following command in your terminal or command prompt: `pip install numpy pandas matplotlib seaborn plotly scikit-learn imbalanced-learn Pillow plotly_express`
 
 ### Running Jupyter Notebook in PyCharm
