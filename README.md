@@ -37,7 +37,7 @@ trade-off at various threshold settings. If we find that these two metrics are n
 incorporate other evaluation metrics and document it in our final project report.
 
 ## Baseline Techniques
-The baseline techniques used for a random forest classification in our project’s case involves the
+The baseline techniques used for a Random Forest Classification (RFC) and XGBoost in our project’s case involves the
 following steps.
 | #  |  Step  |  Description  |
 | :---------------- | :------: | ----: |
@@ -47,13 +47,17 @@ following steps.
 | 4  |  Comparison   |  Once the results are obtained we will compare the metrics with the desired benchmarks and previous results. |
 | 5  |  Model Improvement   |  Based on the results we have obtained, we will fine tune the model and re-evaluate. |
 
+## End-to-End System Diagram
+![image](https://github.com/ricardocarva/CAP4770-Credit-Card-Fraud-Detection/assets/88637817/d0c0e3de-84b7-460c-b88d-c33c3f1044a3)
+
+
 ## Environment Setup
 ### Python Environment
 Ensure you have Python installed (preferably version 3.9) on your system.
 ### Jupyter Notebook
 This project is intended to be run using Jupyter Notebook. If you don't have Jupyter Notebook installed, you can install it using the following command: `pip install jupyter`
 ### Package Installation
-Install the required packages by running the following command in your terminal or command prompt: `pip install numpy pandas matplotlib seaborn plotly scikit-learn imbalanced-learn Pillow plotly_express`
+Install the required packages by running the following command in your terminal or command prompt: `pip install numpy pandas matplotlib seaborn plotly scikit-learn imbalanced-learn Pillow plotly_express xgboost`
 
 ### Running Jupyter Notebook in PyCharm
 1. Install PyCharm:
@@ -93,18 +97,18 @@ If you haven't already, download and install PyCharm from the official website: 
    - The target variable 'Class' is separated from the features to create X (features) and Y (target) arrays.
    - The dataset is split into training and testing sets using train_test_split() from scikit-learn.
 
-5. Handling Class Imbalance:
-   - Different resampling methods are defined in the sample_methods dictionary, including SMOTE, NearMiss, RandomOverSampler, and RandomUnderSampler.
-   - The split_features() function separates features and target, and the rebalance_class() function applies different resampling methods and displays the shape - and balance of the resulting datasets.
-   - The training set is rebalanced using the defined resampling methods.
-
-6. Random Forest Classifier:
+5. Random Forest Classifier:
    - The RandomForestClassifier from scikit-learn is imported.
    - An instance of the classifier is created with a specified number of estimators.
    - The model is trained using the rebalanced training data.
 
+6. XGBoost:
+   - The XGBClassifier from xgboost is imported.
+   - An instance of the classifier is created.
+   - The model is trained using the rebalanced training data.
+
 7. Prediction and Evaluation:
-   - The model's predictions are obtained using predict() on the test data.
+   - The model's predictions are obtained using predict() on the test data. We used SMOTE only in the RFC, but applied NearMiss and SMOTE to both models.
    - Various evaluation metrics (accuracy, precision, recall, F1 score, AUPRC) are computed using scikit-learn's metrics functions.
    - The evaluation results are displayed and visualized using a bar chart.
 
@@ -122,3 +126,9 @@ online transactions,” Jan. 2022, doi: https://doi.org/10.1063/5.0108873.
 [2] C. Whitrow, D. J. Hand, P. Juszczak, D. Weston, and N. M. Adams, “Transaction aggregation as a
 strategy for credit card fraud detection,” Data Mining and Knowledge Discovery, vol. 18, no. 1, pp. 30–55,
 Jul. 2008, doi: https://doi.org/10.1007/s10618-008-0116-z.
+
+[3] “Nearmiss,” Imbalanced-learn, https://imbalanced-learn.org/dev/references/generated/imblearn.under_sampling.NearMiss.html (accessed Aug. 8, 2023).
+
+[4] “SMOTE,” Imbalanced-learn, https://imbalanced-learn.org/dev/references/generated/imblearn.over_sampling.SMOTE.html (accessed Aug. 8, 2023).
+
+[5] A. Gupta, “XGBoost versus Random Forest,” Medium, https://medium.com/geekculture/xgboost-versus-random-forest-898e42870f30 (accessed Aug. 8, 2023).
